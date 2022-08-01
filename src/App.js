@@ -3,27 +3,10 @@ import './App.css';
 
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import About from './components/About';
 import { useState } from 'react';
 import Alert from './components/Alert';
 //import { type } from '@testing-library/user-event/dist/type';
 
-//import { BrowserRouter, Routes } from 'react-router-dom';
-// import React from 'react'
-// import ReactDOM from "react-dom/client";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
-
-//import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
-// import your route components too
 
 
 function App() {
@@ -67,26 +50,13 @@ function App() {
   return (
    <>
 
-<BrowserRouter>
+
 <Navbar title="Welcome" aboutText="About Us" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
     <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
 
-    <Routes>
-    {/* <Route path="/Home" element={<App />} /> */}
-    <Route path="/about" element={<About />} />
-    <Route path="/text" element={<TextForm />} />
-    
-    
-    {/* <Route path="/" >
-          <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
-      </Route> */}
-
-    </Routes>
-
     </div>
-</BrowserRouter>
    </>
    
   );
